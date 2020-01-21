@@ -46,3 +46,83 @@
 
 * set responsive layout without using media queries, click [this chapter](https://openclassrooms.com/en/courses/5295881-create-web-page-layouts-with-css/5369951-set-columns-depending-on-screen-size)
 * exercise: Calendar, [click here](https://codepen.io/adindariztia/pen/MWYzYrW)
+
+## Flexbox
+
+* `flex-container`: container with items inside, arranged in rows or columns
+* `flex-direction`: value varies between:
+    - row
+    - column
+    - row-reverse (from right to left)
+    - column-reverse (from bottom to top)
+* `flex-box`: item arranged via flexbox
+* `flex-wrap`, pilihan nilainya:
+    - `wrap` : the flex items can take up multiple lines as needed, whether they're arranged in rows or columns
+    - `nowrap`: the flex items cannot take up multiple lines. They'll all cram into either one row or column
+    - `wrap-reverse`: the flex items can take up multiple lines as needed but are displayed in reverse
+* Items in Flexbox are arranged horizontally or vertically depending on whether you specify row or column for your flex-direction. This "main" direction is what we call the flex items' main axis. The perpendicular direction is therefore the cross axis
+    - If the elements are arranged horizontally in a row (or rows), the main axis is horizontal, and the cross axis is vertical
+    - If the elements are arranged vertically in a column (or columns), the main axis is vertical, and the cross axis is horizontal
+* alignment along main axis:
+    - `flex-start`: aligned at the start of the container
+    - `flex-end`: aligned at the end of the container
+    - `center`: aligned in the center of the container
+    - `space-between`: elements are spread out along the axis (there's space between each)
+    - `space-around`: elements are spread out along the axis, but there's also space around the edges
+    
+    example:
+    ```
+    .container {
+    display: flex;
+    justify-content: space-around;
+    }
+    ```
+
+    * alignment along cross axis:
+        - `stretch`: the elements are stretched out along the whole cross axis (this is the default value)
+        - `flex-start`: aligned at the start of the container
+        - `flex-end`: aligned at the end of the container
+        - `center` : aligned in the center of the container
+        - `baseline`: aligned along the baseline of the container
+
+        example:
+        ```
+        .container 
+            { display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+        ```
+    * aligning one item, example:
+        ```
+        .container div:nth-child(6) {
+            align-self: flex-end;
+        }
+        ```
+
+    * `align-content` : to align multiple rows or columns along the cross-axis (value of this property similar to aligment along main axis)
+
+    * visit [this chapter](https://openclassrooms.com/en/courses/5295881-create-web-page-layouts-with-css/5415181-align-items-and-justify-content) for detailed explanation and more examples. As you notice i'm getting lazier in taking notes i just copy-pasted them :(
+
+    * `flex-basis`:control the space they take up along the container's main axis
+
+    * `flex-grow`: to make elements bigger than the ones next to them
+    * `flex-shrink`: to reduce the size of certain elements when there's not enough space
+    * `flex`: combination of `flex-basis`, `flex-grow`, and `flex-shrink`
+
+    example:
+
+    ```
+    .container div:nth-child(2) {
+        flex: 1 3 100px;
+    }
+    ```
+
+    This means the second element in the container will have a  flex-grow  of 1 (default), a  flex-shrink  of 3 (meaning it will shrink 3 times faster than the other elements), and a  flex-basis  of 100px (it's starting "width" if you will). 
+
+    * revisiting [this chapter](https://openclassrooms.com/en/courses/5295881-create-web-page-layouts-with-css/5415656-adjust-element-dimensions) because why not
+
+    * `order`: to reorder elements in your layout without touching the HTML, visit [this chapter](https://openclassrooms.com/en/courses/5295881-create-web-page-layouts-with-css/5419976-reorder-elements) for examples
+
+    * PLEASE DO THE ACTIVITY [HERE](https://openclassrooms.com/en/courses/5295881-create-web-page-layouts-with-css/exercises/2766?to-redirect=true#/step1) (not yet started)
+
