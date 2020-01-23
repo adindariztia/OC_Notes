@@ -126,3 +126,22 @@
 
     * PLEASE DO THE ACTIVITY [HERE](https://openclassrooms.com/en/courses/5295881-create-web-page-layouts-with-css/exercises/2766?to-redirect=true#/step1) (not yet started)
 
+## Legacy Layouts
+
+* `block-level` : elements start on new lines and take up the full width available to them
+
+* `inline` : elements take up only as much space as they need and do not start on new lines
+
+* `inline-block` : elements can display side-by-side but still can have width and height properties, which regular inline elements cannot
+
+* Even without using Flexbox or CSS Grid, you can adjust where an element appears on a page by using a property called `position`
+
+* `position` property values: 
+    - `static`: element appears where it normally would in the flow of your HTML document
+    - `relative`: position it relative to where it would normally be
+    - `absolute` : Absolutely positioned elements are set relative to their nearest explicitly positioned ancestor
+    - `fixed`: This is similar to absolute and relative positioning in that you have to set top, bottom, left, and right values. However, an element with a fixed position will scroll with the page and will often be positioned relative to the entire viewport, except in a very specific subset of cases
+
+* read about float [here](https://openclassrooms.com/en/courses/5295881-create-web-page-layouts-with-css/5467706-float-elements)
+
+* overlapping elements read [here](https://openclassrooms.com/en/courses/5295881-create-web-page-layouts-with-css/5467936-stack-elements-in-an-order)
